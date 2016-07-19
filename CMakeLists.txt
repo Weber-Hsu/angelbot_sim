@@ -197,3 +197,9 @@ install(PROGRAMS
 include_directories(include ${catkin_INCLUDE_DIRS})
 add_executable(state_publisher src/state_publisher.cpp)
 target_link_libraries(state_publisher ${catkin_LIBRARIES})
+
+add_executable(odometry_calc src/odometry_calc.cpp)
+target_link_libraries(odometry_calc ${catkin_LIBRARIES})
+
+add_executable(twist2motor src/twist2motor.cpp)
+target_link_libraries(twist2motor ${catkin_LIBRARIES})

@@ -28,6 +28,10 @@
 	<node name="robot_state_publisher" pkg="robot_state_publisher" type="state_publisher">
 		<param name="publish_frequency" type="double" value="50.0"></param>
 		</node>
+	<node name="odometry_calc" pkg="angelbot_sim" type="odometry_calc"></node>
+	<node name="twist2motor" pkg="angelbot_sim" type="twist2motor"></node>
+	
+
 		
 	<include file="$(find angelbot_sim)/launch/gmapping.launch"></include>
 	<include file="$(find angelbot_sim)/launch/move_base.launch"></include>
