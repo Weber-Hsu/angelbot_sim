@@ -25,10 +25,9 @@ private:
 	double omega;
 
 	float ticks_since_target;
+	double timeout_ticks;
 
 	void init_variables();
 	void get_node_params();
-
-	void spinOnce();
 	void twistCallback(const geometry_msgs::Twist &twist_aux);
 };
