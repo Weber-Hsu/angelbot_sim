@@ -7,8 +7,8 @@
 	    <robotNamespace>/angelbot</robotNamespace>
 	    <robotSimType>gazebo_ros_control/DefaultRobotHWSim</robotSimType>
 	  </plugin>
-	  <!-- plugin name="differential_drive_controller" filename="libgazebo_ros_diff_drive.so">
-	  	<rosDebugLevel>Debug</rosDebugLevel
+	  <plugin name="differential_drive_controller" filename="libgazebo_ros_diff_drive.so">
+	  	<!-- rosDebugLevel>Debug</rosDebugLevel-->
 	  	<publishWheelTF>false</publishWheelTF>
 	  	<robotNamespace>/</robotNamespace>
 	  	<publishTf>1</publishTf>
@@ -22,10 +22,10 @@
 	  	<broadcastTF>1</broadcastTF>
 	  	<wheelTorque>30</wheelTorque>
 	  	<wheelAcceleration>1.8</wheelAcceleration>
-	  	<commandTopic>cmd_vel</commandTopic>
+	  	<commandTopic>angelbot/cmd_vel</commandTopic>
 	  	<odometryTopic>odom</odometryTopic>
     	<odometryFrame>odom</odometryFrame>
-    	<robotBaseFrame>${robotname}_base</robotBaseFrame></plugin-->
+    	<robotBaseFrame>${robotname}_base</robotBaseFrame></plugin>
 	</gazebo>
 	
 	<!--baselink-->

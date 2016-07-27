@@ -5,7 +5,10 @@
  	<xacro:include filename="$(find angelbot_sim)/modeldescription/urdf/angelbot.gazebo" />
  	<!-- Import Rviz colors -->
 	<xacro:include filename="$(find angelbot_sim)/modeldescription/urdf/angelbotmaterial4rviz.xacro"/>
+	
 	<xacro:include filename="$(find angelbot_sim)/modeldescription/urdf/sensors/rplidar_laser.urdf.xacro" />
+	<xacro:include filename="$(find angelbot_sim)/modeldescription/urdf/sensors/mpu6050_imu.urdf.xacro" />
+	
 	<transmission name="trans_mobile_left">
 		<type>transmission_interface/SimpleTransmission</type>
 		<joint name="shaft2leftwheel">
@@ -101,7 +104,9 @@
 		<origin xyz="0 -0.1235 0"/>
 		<axis xyz="0 1 0"/>
 	</joint>
-	<xacro:rplidar_laser name="${robotname}" parent="${robotname}_base" ros_topic="/scan" update_rate="40" min_angle="-1.3962634" max_angle="1.3962634" >
+	<xacro:rplidar_laser name="${robotname}" parent="${robotname}_base" ros_topic="scan" update_rate="40" min_angle="-1.3962634" max_angle="1.3962634" >
     </xacro:rplidar_laser>
+    <xacro:mpu6050_imu name="${robotname}" parent="${robotname}_base">
+    </xacro:mpu6050_imu>
 	
 </robot>
